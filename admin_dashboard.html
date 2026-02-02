@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard_style.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Admin Dashboard</h2>
+
+    <div class="card">
+        <h3>Members in Queue</h3>
+        <p id="queueCount">0</p>
+        <button onclick="addMember()">+ Add Member</button>
+        <button onclick="removeMember()">- Remove Member</button>
+    </div>
+</div>
+
+<script>
+    let count = 5; // sample initial value
+    document.getElementById("queueCount").innerText = count;
+
+    function addMember() {
+        count++;
+        document.getElementById("queueCount").innerText = count;
+    }
+
+    function removeMember() {
+        if (count > 0) {
+            count--;
+            document.getElementById("queueCount").innerText = count;
+        }
+    }
+</script>
+
+</body>
+</html>
